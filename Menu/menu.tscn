@@ -22,5 +22,7 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 script = ExtResource("1_nj26t")
 
+[node name="Character" type="CharacterBody2D" parent="."]
+
 [connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_quit_pressed"]
