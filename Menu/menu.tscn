@@ -1,26 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://nv6j8cr3eqij"]
+[gd_scene load_steps=2 format=3 uid="uid://nfpq66vwvkrs"]
 
-[ext_resource type="Script" path="res://Menu/Play.gd" id="1_gkh2b"]
-[ext_resource type="Script" path="res://Menu/Quit.gd" id="2_dh8gj"]
+[ext_resource type="Script" path="res://menu.gd" id="1_nj26t"]
 
 [node name="Menu" type="Node2D"]
 
 [node name="Play" type="Button" parent="."]
-offset_left = 448.0
-offset_top = 114.0
-offset_right = 718.0
-offset_bottom = 257.0
+offset_left = 492.0
+offset_top = 202.0
+offset_right = 677.0
+offset_bottom = 292.0
 theme_override_font_sizes/font_size = 50
 text = "Play"
-script = ExtResource("1_gkh2b")
+script = ExtResource("1_nj26t")
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 447.0
-offset_top = 316.0
-offset_right = 717.0
-offset_bottom = 459.0
+offset_left = 488.0
+offset_top = 342.0
+offset_right = 689.0
+offset_bottom = 435.0
 theme_override_font_sizes/font_size = 50
 text = "Quit"
-script = ExtResource("2_dh8gj")
+script = ExtResource("1_nj26t")
 
-[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
+[connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_quit_pressed"]
