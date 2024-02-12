@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtgiboxac13rj"]
+
+[ext_resource type="Texture2D" uid="uid://cgwnmpuip3p81" path="res://Sprites/BlackSprite.png" id="1_a6xaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0y32"]
+size = Vector2(62, 148)
+
+[node name="Character1" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s0y32")
+
+[node name="BlackSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.031, 0.1)
+texture = ExtResource("1_a6xaj")
