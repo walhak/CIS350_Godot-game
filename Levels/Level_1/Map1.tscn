@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bhes5iv03ug5j" path="res://Levels/Level_1/Green.png" id="1_ps7tg"]
 [ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_jwhw4"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wr33"]
 texture = ExtResource("2_jwhw4")
 0:0/0 = 0
@@ -165,6 +166,7 @@ stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
+<<<<<<< HEAD
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_bq1x3")
