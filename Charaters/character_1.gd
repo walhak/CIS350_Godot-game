@@ -51,3 +51,7 @@ func jump():
 	
 	if is_on_floor():
 		current_jumps = 0
+
+
+func _on_menu_button_pressed():
+	pass # Replace with function body.

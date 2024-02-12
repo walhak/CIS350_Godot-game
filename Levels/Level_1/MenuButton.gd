@@ -1,4 +1,4 @@
-extends MenuButton
+extends Button
 
 
 func _on_pressed():
