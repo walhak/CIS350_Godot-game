@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CIS350_Godot-game"
-run/main_scene="res://Menu/menu.tscn"
+run/main_scene="res://Levels/Level_1.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
