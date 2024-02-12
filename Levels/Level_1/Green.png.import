@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uhspbq6oy8pt"
-path="res://.godot/imported/Hamburger_button.jpg-e1907d5d0b7fa5ddb3cc233c12ecd310.ctex"
+uid="uid://bhes5iv03ug5j"
+path="res://.godot/imported/Green.png-d49b9b1a4a4ca35b31ca3cf888f35deb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Hamburger_button.jpg"
-dest_files=["res://.godot/imported/Hamburger_button.jpg-e1907d5d0b7fa5ddb3cc233c12ecd310.ctex"]
+source_file="res://Levels/Level_1/Green.png"
+dest_files=["res://.godot/imported/Green.png-d49b9b1a4a4ca35b31ca3cf888f35deb.ctex"]
 
 [params]
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvhes1us3c56m"]
+[gd_scene load_steps=8 format=3 uid="uid://cvhes1us3c56m"]
 
-[ext_resource type="Texture2D" uid="uid://bhes5iv03ug5j" path="res://Green.png" id="1_ps7tg"]
-[ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Terrain (16x16).png" id="2_jwhw4"]
+[ext_resource type="Texture2D" uid="uid://bhes5iv03ug5j" path="res://Levels/Level_1/Green.png" id="1_ps7tg"]
+[ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_jwhw4"]
+[ext_resource type="Script" path="res://Levels/Level_1/MenuButton.gd" id="3_iaohh"]
+[ext_resource type="Texture2D" uid="uid://uhspbq6oy8pt" path="res://Levels/Level_1/Hamburger_button.jpg" id="4_gjok3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wr33"]
 texture = ExtResource("2_jwhw4")
@@ -175,3 +177,21 @@ layer_0/tile_data = PackedInt32Array(19333120, 458752, 1, 19398656, 458752, 1, 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
 shape = SubResource("RectangleShape2D_r1jtg")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 17.0
+offset_right = 89.0
+offset_bottom = 63.0
+text = "123"
+script = ExtResource("3_iaohh")
+
+[node name="HamburgerButton" type="Sprite2D" parent="MenuButton"]
+visibility_layer = 4
+position = Vector2(1, -1)
+scale = Vector2(0.0583333, 0.0916179)
+texture = ExtResource("4_gjok3")
+centered = false
+
+[connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_pressed"]
