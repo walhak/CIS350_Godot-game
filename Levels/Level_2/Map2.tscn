@@ -191,6 +191,7 @@ position = Vector2(576, 640)
 scale = Vector2(0.574219, 0.0200535)
 
 [node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 72.0
