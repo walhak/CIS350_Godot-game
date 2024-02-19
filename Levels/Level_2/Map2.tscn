@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxkcsjc5pt0k0"]
+[gd_scene load_steps=7 format=3 uid="uid://dxkcsjc5pt0k0"]
 
 [ext_resource type="Texture2D" uid="uid://bxe85cf6pccs4" path="res://Levels/Level_2/Blue.png" id="1_xuut5"]
 [ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_mlolk"]
-[ext_resource type="Script" path="res://Levels/Level_1/MenuButton.gd" id="4_7awgm"]
-[ext_resource type="Texture2D" uid="uid://c0wyevwhu08sj" path="res://Levels/Level_1/left-back-button.svg" id="5_qk8si"]
-[ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="6_s3g7b"]
-[ext_resource type="Script" path="res://Charaters/character_1.gd" id="7_ek0c8"]
+[ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_r124p"]
+[ext_resource type="Script" path="res://Charaters/character_1.gd" id="4_ak68y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dohmt"]
 texture = ExtResource("2_mlolk")

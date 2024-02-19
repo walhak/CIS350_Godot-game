@@ -30,7 +30,7 @@ func input() -> Vector2:
 	return input_dir
 	
 func acclerate(direction):#speed up
-	#direction is left or right
+	#direction is left or right on what
 	#speed is the rate of movement
 	#accleration is 
 	velocity = velocity.move_toward(speed * direction, accleration)
@@ -38,7 +38,7 @@ func acclerate(direction):#speed up
 func add_friction():#slow down
 	velocity = velocity.move_toward(Vector2.ZERO, friction)
 	
-func player_movement():
+func player_movement(): 
 	move_and_slide()
 	
 func jump():
