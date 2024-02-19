@@ -14,4 +14,3 @@ shape = SubResource("RectangleShape2D_s0y32")
 position = Vector2(-7, 12)
 scale = Vector2(3.45312, 3.84375)
 texture = ExtResource("1_km8e6")
->>>>>>> Malachi
