@@ -13,3 +13,9 @@ shape = SubResource("RectangleShape2D_s0y32")
 [node name="BlackSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.031, 0.1)
 texture = ExtResource("1_a6xaj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -10000
+limit_top = 0
+limit_right = 1152
+limit_bottom = 640
