@@ -469,6 +469,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ps7tg")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

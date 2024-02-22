@@ -42,4 +42,5 @@ text = "Quit"
 [node name="BG" parent="." instance=ExtResource("2_b1t5e")]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

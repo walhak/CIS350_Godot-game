@@ -155,9 +155,6 @@ texture = ExtResource("2_mlolk")
 [sub_resource type="TileSet" id="TileSet_xuyc2"]
 sources/0 = SubResource("TileSetAtlasSource_dohmt")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_shdw3"]
-size = Vector2(1176, 20)
-
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
