@@ -56,5 +56,5 @@ func jump():
 func _on_area_2d_body_entered(body):
 	if body == self:
 		print("Should be on next level")
-		get_tree().change_scene_to_file("res://Menu/menu.tscn")
+		get_tree().change_scene_to_file("res://Levels/Level_2/Map2.tscn")
 
