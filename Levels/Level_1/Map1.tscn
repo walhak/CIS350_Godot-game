@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvhes1us3c56m"]
+[gd_scene load_steps=10 format=3 uid="uid://cvhes1us3c56m"]
 
 [ext_resource type="Texture2D" uid="uid://bhes5iv03ug5j" path="res://Levels/Level_1/Green.png" id="1_ps7tg"]
 [ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_jwhw4"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_f4mx8"]
 [ext_resource type="Script" path="res://Charaters/character_1.gd" id="4_22krf"]
+[ext_resource type="Script" path="res://Levels/Level_1/Area2D.gd" id="5_vslle"]
+[ext_resource type="Texture2D" uid="uid://c1mbrj4jy6lsa" path="res://Menu/door.png" id="6_xs0u6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wr33"]
 texture = ExtResource("2_jwhw4")
@@ -460,6 +462,9 @@ texture = ExtResource("2_jwhw4")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0wr33")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyyk3"]
+size = Vector2(186, 138)
+
 [node name="TextureRect" type="TextureRect"]
 texture_filter = 1
 anchors_preset = 15
@@ -487,3 +492,17 @@ speed = 325
 jump_power = -1400
 accleration = 60
 gravity = 98
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_vslle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 160)
+shape = SubResource("RectangleShape2D_eyyk3")
+
+[node name="Door" type="Sprite2D" parent="Area2D"]
+position = Vector2(56, 160)
+scale = Vector2(0.12, 0.146667)
+texture = ExtResource("6_xs0u6")
+
+[connection signal="body_entered" from="Area2D" to="Character1" method="_on_area_2d_body_entered"]

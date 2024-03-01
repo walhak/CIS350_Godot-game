@@ -53,5 +53,8 @@ func jump():
 		current_jumps = 0
 
 
-func _on_menu_button_pressed():
-	pass # Replace with function body.
+func _on_area_2d_body_entered(body):
+	if body == self:
+		print("Should be on next level")
+		get_tree().change_scene_to_file("res://Menu/menu.tscn")
+
