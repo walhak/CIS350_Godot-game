@@ -23,6 +23,10 @@ buses/default_bus_layout="res://Menu/default_bus_layout.tres"
 
 project/assembly_name="CIS350_Godot-game"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [input]
 
 move_up={

@@ -8,9 +8,11 @@
 script = ExtResource("1_b4m8y")
 
 [node name="Normal" parent="." instance=ExtResource("2_j6ywb")]
+offset_right = 930.0
+offset_bottom = 387.0
 
 [node name="Compact" parent="." instance=ExtResource("3_3glw1")]
 offset_left = 5.0
-offset_top = 273.0
-offset_right = 265.0
-offset_bottom = 403.0
+offset_top = 432.0
+offset_right = 395.0
+offset_bottom = 633.0

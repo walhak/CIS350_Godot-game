@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtgiboxac13rj"]
+[gd_scene load_steps=4 format=3 uid="uid://dtgiboxac13rj"]
 
 [ext_resource type="Texture2D" uid="uid://d0p2vla1kpjfq" path="res://Sprites/Fall (32x32).png" id="1_km8e6"]
+[ext_resource type="Script" path="res://addons/gut/test.gd" id="2_5n7t7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0y32"]
 size = Vector2(63, 91)
@@ -22,3 +23,6 @@ limit_left = -48
 limit_top = -48
 limit_right = 1200
 limit_bottom = 672
+
+[node name="GutTest" type="Node" parent="."]
+script = ExtResource("2_5n7t7")

@@ -29,7 +29,7 @@ func _ready():
 		_test_running_setup()
 
 func _test_running_setup():
-	set_font_size(100)
+	set_font_size(50)
 	_normal_gui.get_textbox().text = "hello world, how are you doing?"
 
 # ------------------------
