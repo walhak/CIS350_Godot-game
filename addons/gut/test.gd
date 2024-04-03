@@ -1,4 +1,4 @@
-extends "res://addons/gut/test.gd"
+"""extends "res://addons/gut/test.gd"
 
 class_name CharacterTest
 
@@ -45,3 +45,4 @@ func test_character_movement():
 
 	# Clean up
 	character_instance.queue_free()
+"""

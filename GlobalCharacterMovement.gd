@@ -21,6 +21,8 @@ extends CharacterBody2D
 #currently how many jumps the character did
 var current_jumps = 0
 
+var level_tracker = 0
+
 var current_level = ["res://Levels/Level_1/Map1.tscn", "res://Levels/Level_2/Map2.tscn", "res://Menu/menu.tscn"]
 
 var check = false
@@ -28,11 +30,13 @@ var check = false
 #main update to allow movement
 func _physics_process(delta):
 	var input_dir: Vector2 = input()
-	var level_tracker = 0
+	
+	if Input.is_action_just_pressed("exitGame"):
+		get_tree().quit()
 	
 	if Input.is_action_just_pressed("move_down") and check == true:
 		get_tree().change_scene_to_file(current_level[level_tracker+1])
-		level_tracker += 1
+		level_tracker = level_tracker + 1
 		
 		
 	if Input.is_action_just_pressed("resetButton"):
