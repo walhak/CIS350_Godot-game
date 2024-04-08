@@ -467,7 +467,7 @@ texture = ExtResource("2_mlolk")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dohmt")
 
-[node name="Node" type="Node"]
+[node name="M2" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -490,8 +490,5 @@ layer_0/tile_data = PackedInt32Array(917503, 786432, 5, 851967, 786432, 5, 78643
 top_level = true
 position = Vector2(31, 572)
 script = ExtResource("4_hfw8w")
-speed = 350
 jump_power = -1300
-accleration = 70
-friction = 90
 gravity = 105

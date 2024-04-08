@@ -465,7 +465,7 @@ sources/0 = SubResource("TileSetAtlasSource_0wr33")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyyk3"]
 size = Vector2(69, 145.5)
 
-[node name="TextureRect" type="TextureRect"]
+[node name="M1" type="TextureRect"]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -489,11 +489,6 @@ layer_1/tile_data = PackedInt32Array()
 top_level = true
 position = Vector2(185, 576)
 script = ExtResource("4_ugie8")
-speed = 350
-jump_power = -1300
-accleration = 70
-friction = 90
-gravity = 105
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_vslle")

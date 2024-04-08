@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
 #max speed character moves at
-@export var speed = 550
+@export var speed = 365
 
 #how high the character jumps
-@export var jump_power = -2000
+@export var jump_power = -1350
 
 #how fast the character gets to max speed
-@export var accleration = 50
+@export var accleration = 70
 
 #how fast the character slows with no input being done
-@export var friction = 70
+@export var friction = 90
 
 #how fast the character falls to the "floor"
-@export var gravity = 120
+@export var gravity = 110
 
 #number of times the character can jump
 @export var max_jumps = 1
@@ -21,8 +21,7 @@ extends CharacterBody2D
 #currently how many jumps the character did
 var current_jumps = 0
 
-var level_tracker = 0
-
+var rep_cur = ["M1", "M2", "menu"]
 var current_level = ["res://Levels/Level_1/Map1.tscn", "res://Levels/Level_2/Map2.tscn", "res://Menu/menu.tscn"]
 
 var check = false
@@ -31,16 +30,23 @@ var check = false
 func _physics_process(delta):
 	var input_dir: Vector2 = input()
 	
+	if get_tree().get_current_scene() != null:
+		var current_scene_name = get_tree().get_current_scene().get_name()
+		var index = rep_cur.find(current_scene_name)
+		
+		if Input.is_action_just_pressed("move_down") and check == true:
+			current_scene_name = get_tree().get_current_scene().get_name()
+			index = rep_cur.find(current_scene_name)
+			var next_scene_path = current_level[index+1]
+			get_tree().change_scene_to_file(next_scene_path)
+			
+		if Input.is_action_just_pressed("resetButton"):
+			current_scene_name = get_tree().get_current_scene().get_name()
+			index = rep_cur.find(current_scene_name)
+			get_tree().change_scene_to_file(current_level[index])
+	
 	if Input.is_action_just_pressed("exitGame"):
 		get_tree().quit()
-	
-	if Input.is_action_just_pressed("move_down") and check == true:
-		get_tree().change_scene_to_file(current_level[level_tracker+1])
-		level_tracker = level_tracker + 1
-		
-		
-	if Input.is_action_just_pressed("resetButton"):
-		get_tree().change_scene_to_file(current_level[level_tracker])
 		
 	if input_dir != Vector2.ZERO:
 		acclerate(input_dir)
