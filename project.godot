@@ -21,7 +21,13 @@ buses/default_bus_layout="res://Menu/default_bus_layout.tres"
 
 [autoload]
 
-GlobalCharacterMovement="*res://GlobalCharacterMovement.gd"
+GlobalCharacterMovement="*res://Charaters/GlobalCharacterMovement.gd"
+
+[display]
+
+window/size/viewport_width=1248
+window/size/viewport_height=720
+window/size/initial_position_type=3
 
 [dotnet]
 

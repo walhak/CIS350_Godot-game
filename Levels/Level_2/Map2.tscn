@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://dxkcsjc5pt0k0"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://dxkcsjc5pt0k0"]
+>>>>>>> Nazim
 
 [ext_resource type="Texture2D" uid="uid://bxe85cf6pccs4" path="res://Levels/Level_2/Blue.png" id="1_xuut5"]
 [ext_resource type="Texture2D" uid="uid://c8maljv6ykjsx" path="res://Terrain (16x16).png" id="2_o0ekv"]
 [ext_resource type="Script" path="res://Levels/Level_1/Area2D.gd" id="3_8bnad"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_r124p"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c1mbrj4jy6lsa" path="res://Menu/door.png" id="4_0px5v"]
 [ext_resource type="Script" path="res://GlobalCharacterMovement.gd" id="4_hfw8w"]
+=======
+>>>>>>> Nazim
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xed4r"]
 texture = ExtResource("2_o0ekv")
@@ -470,6 +477,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 16.0
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xuut5")

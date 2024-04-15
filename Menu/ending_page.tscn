@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6licvmypuc3h"]
+
+[ext_resource type="Texture2D" uid="uid://cfpj31d0pqy3c" path="res://Menu/End_picture.png" id="1_63qmq"]
+[ext_resource type="Script" path="res://Menu/Menu.gd" id="2_3duup"]
+[ext_resource type="Script" path="res://Charaters/Camera2D.gd" id="3_vewwm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwjoe"]
+bg_color = Color(0.337255, 0.603922, 0.0862745, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5htdp"]
+
+[node name="Ending_screen" type="Node2D"]
+
+[node name="1920x1080" type="Sprite2D" parent="."]
+position = Vector2(600, 360)
+scale = Vector2(0.696429, 0.703125)
+texture = ExtResource("1_63qmq")
+
+[node name="Label" type="Label" parent="1920x1080"]
+offset_left = -788.307
+offset_top = 310.045
+offset_right = 713.693
+offset_bottom = 389.045
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.627451, 0.627451, 0.627451, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 8
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_pwjoe")
+text = "Made by: Ahmed Said, Nazim Jafarov, Malachi Hanson"
+
+[node name="Full-Screen" type="Button" parent="1920x1080"]
+anchors_preset = -1
+anchor_left = 0.000214696
+anchor_top = -0.000130206
+anchor_right = 0.0403933
+anchor_bottom = 0.0369792
+offset_left = -172.692
+offset_top = -45.3778
+offset_right = 19.3073
+offset_bottom = 18.6222
+theme_override_font_sizes/font_size = 46
+text = "Full Screen"
+script = ExtResource("2_3duup")
+metadata/_edit_use_anchors_ = true
+
+[node name="Back_to_menu" type="Button" parent="1920x1080"]
+material = SubResource("CanvasItemMaterial_5htdp")
+anchors_preset = -1
+anchor_left = 0.000214696
+anchor_top = -0.000130206
+anchor_right = 0.0403933
+anchor_bottom = 0.0369792
+offset_left = -253.103
+offset_top = 91.1555
+offset_right = 112.897
+offset_bottom = 155.156
+theme_override_font_sizes/font_size = 46
+text = "Back to main menu"
+script = ExtResource("2_3duup")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -48
+limit_top = -48
+limit_right = 1200
+limit_bottom = 672
+script = ExtResource("3_vewwm")
+
+[connection signal="pressed" from="1920x1080/Full-Screen" to="1920x1080/Full-Screen" method="_on_pressed"]
+[connection signal="pressed" from="1920x1080/Back_to_menu" to="1920x1080/Back_to_menu" method="_on_back_to_menu_pressed"]
