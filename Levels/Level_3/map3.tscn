@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlg2bskg43ted"]
+[gd_scene load_steps=11 format=3 uid="uid://dlg2bskg43ted"]
 
 [ext_resource type="Texture2D" uid="uid://c1ss3g5kk7cog" path="res://Levels/Level_3/Gray.png" id="1_nqfjk"]
 [ext_resource type="Texture2D" uid="uid://kcdbd5icwh20" path="res://Levels/Level_3/Terrain (16x16).png" id="2_2ltg7"]
 [ext_resource type="PackedScene" uid="uid://gkcuf2k0dihj" path="res://Levels/Level_3/collectable.tscn" id="3_lxjg6"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="4_vdivp"]
 [ext_resource type="Script" path="res://GlobalCharacterMovement.gd" id="5_52fvd"]
+[ext_resource type="Script" path="res://Levels/Level_1/Area2D.gd" id="6_5wd1h"]
 [ext_resource type="Texture2D" uid="uid://c1mbrj4jy6lsa" path="res://Menu/door.png" id="6_is2q6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7f8m4"]
@@ -457,7 +458,10 @@ texture = ExtResource("2_2ltg7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7f8m4")
 
-[node name="Node" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdb7s"]
+size = Vector2(527.355, 982.257)
+
+[node name="M3" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -472,12 +476,30 @@ grow_vertical = 2
 texture = ExtResource("1_nqfjk")
 stretch_mode = 1
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="TextureRect"]
 texture_filter = 1
+position = Vector2(1, -4)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_k82pm")
 format = 2
 layer_0/tile_data = PackedInt32Array(65535, 786432, 1, 131071, 786432, 1, 196607, 786432, 1, 262143, 786432, 1, 327679, 786432, 1, 393215, 786432, 1, 458751, 786432, 1, 524287, 786432, 1, 589823, 786432, 1, 655359, 786432, 1, 720895, 786432, 1, 786431, 786432, 1, 851967, 786432, 1, 917503, 786432, 1, -1, 786432, 1, -65536, 786432, 1, -65535, 786432, 1, -65534, 786432, 1, -65533, 786432, 1, -65532, 786432, 1, -65531, 786432, 1, -65530, 786432, 1, -65529, 786432, 1, -65528, 786432, 1, -65527, 786432, 1, -65526, 786432, 1, -65525, 786432, 1, -65524, 786432, 1, -65523, 786432, 1, -65522, 786432, 1, -65521, 786432, 1, -65520, 786432, 1, -65519, 786432, 1, -65518, 786432, 1, -65517, 786432, 1, -65516, 786432, 1, -65515, 786432, 1, -65514, 786432, 1, -65513, 786432, 1, 851968, 786432, 1, 851969, 786432, 1, 851970, 786432, 1, 851971, 786432, 1, 851972, 786432, 1, 851973, 786432, 1, 851974, 786432, 1, 851975, 786432, 1, 851976, 786432, 1, 851977, 786432, 1, 851978, 786432, 1, 851979, 786432, 1, 851980, 786432, 1, 851981, 786432, 1, 851982, 786432, 1, 851983, 786432, 1, 851984, 786432, 1, 851985, 786432, 1, 851986, 786432, 1, 851987, 786432, 1, 851988, 786432, 1, 851989, 786432, 1, 851990, 786432, 1, 851991, 786432, 1, -65512, 786432, 1, -65511, 786432, 1, -65510, 786432, 1, -65509, 786432, 1, -65508, 786432, 1, -65507, 786432, 1, -65506, 786432, 1, -65505, 786432, 1, -65504, 786432, 1, -65503, 786432, 1, -65502, 786432, 1, -65501, 786432, 1, -65500, 786432, 1, 851992, 786432, 1, 851993, 786432, 1, 851994, 786432, 1, 851995, 786432, 1, 851996, 786432, 1, 851997, 786432, 1, 851998, 786432, 1, 851999, 786432, 1, 852000, 786432, 1, 852001, 786432, 1, 852002, 786432, 1, 852003, 786432, 1, 852004, 786432, 1, 852005, 786432, 1, 786469, 786432, 1, 720933, 786432, 1, 655397, 786432, 1, 589861, 786432, 1, 524325, 786432, 1, 458789, 786432, 1, 393253, 786432, 1, 327717, 786432, 1, 262181, 786432, 1, 196645, 786432, 1, 131109, 786432, 1, 65573, 786432, 1, 37, 786432, 1, -65499, 786432, 1, 720913, 851968, 1, 786449, 851968, 2, 720914, 917504, 1, 786450, 917504, 2, 720928, 851968, 1, 786464, 851968, 2, 720929, 917504, 1, 786465, 917504, 2, 458777, 851968, 0, 458778, 917504, 0, 327708, 786432, 0, 327709, 851968, 0, 327710, 917504, 0, 196640, 786432, 0, 196641, 851968, 0, 196642, 917504, 0, 196625, 786432, 0, 196626, 851968, 0, 196627, 917504, 0, 262153, 786432, 0, 262154, 851968, 0, 262155, 917504, 0, 327682, 786432, 0, 327683, 851968, 0, 327684, 917504, 0, 589824, 786432, 0, 589825, 851968, 0, 589826, 917504, 0, 327691, 786432, 0, 327692, 851968, 0, 327693, 917504, 0, 393219, 786432, 0, 393220, 851968, 0, 393221, 917504, 0, 262160, 786432, 0, 262161, 851968, 0, 262162, 917504, 0, 196631, 786432, 0, 196632, 851968, 0, 589846, 786432, 1)
+
+[node name="Character1" parent="TextureRect" instance=ExtResource("4_vdivp")]
+top_level = true
+position = Vector2(138, 571)
+script = ExtResource("5_52fvd")
+
+[node name="Area2D2" type="Area2D" parent="TextureRect"]
+position = Vector2(1702, 500)
+scale = Vector2(0.185833, 0.206667)
+script = ExtResource("6_5wd1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D2"]
+position = Vector2(16.1426, 94.3547)
+shape = SubResource("RectangleShape2D_kdb7s")
+
+[node name="Door" type="Sprite2D" parent="TextureRect/Area2D2"]
+texture = ExtResource("6_is2q6")
 
 [node name="Collectable" parent="." instance=ExtResource("3_lxjg6")]
 texture_filter = 1
@@ -507,18 +529,8 @@ position = Vector2(1555, 54)
 [node name="Collectable9" parent="." instance=ExtResource("3_lxjg6")]
 position = Vector2(1358, 147)
 
-[node name="Character1" parent="." instance=ExtResource("4_vdivp")]
-top_level = true
-position = Vector2(138, 571)
-script = ExtResource("5_52fvd")
-
 [node name="Collectable10" parent="." instance=ExtResource("3_lxjg6")]
 position = Vector2(1097, 46)
-
-[node name="Door" type="Sprite2D" parent="."]
-position = Vector2(1701, 504)
-scale = Vector2(0.185833, 0.206667)
-texture = ExtResource("6_is2q6")
 
 [node name="Collectable11" parent="." instance=ExtResource("3_lxjg6")]
 position = Vector2(429, 487)
@@ -552,3 +564,6 @@ position = Vector2(1243, 547)
 
 [node name="Collectable21" parent="." instance=ExtResource("3_lxjg6")]
 position = Vector2(1576, 38)
+
+[connection signal="body_entered" from="TextureRect/Area2D2" to="TextureRect/Character1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TextureRect/Area2D2" to="TextureRect/Character1" method="_on_area_2d_body_exited"]

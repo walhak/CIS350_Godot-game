@@ -498,3 +498,6 @@ texture = ExtResource("4_0px5v")
 top_level = true
 position = Vector2(31, 572)
 script = ExtResource("4_hfw8w")
+
+[connection signal="body_entered" from="TextureRect/Area2D" to="Character1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TextureRect/Area2D" to="Character1" method="_on_area_2d_body_exited"]
