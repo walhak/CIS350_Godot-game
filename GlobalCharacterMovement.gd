@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
 #max speed character moves at
-@export var speed = 550
+@export var speed = 365
 
 #how high the character jumps
-@export var jump_power = -2000
+@export var jump_power = -1350
 
 #how fast the character gets to max speed
-@export var accleration = 50
+@export var accleration = 70
 
 #how fast the character slows with no input being done
-@export var friction = 70
+@export var friction = 90
 
 #how fast the character falls to the "floor"
-@export var gravity = 120
+@export var gravity = 110
 
 #number of times the character can jump
 @export var max_jumps = 1
