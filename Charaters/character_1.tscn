@@ -23,6 +23,6 @@ texture = ExtResource("1_km8e6")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -48
 limit_top = -48
-limit_right = 1950
+limit_right = 1792
 limit_bottom = 672
 script = ExtResource("3_rr731")
