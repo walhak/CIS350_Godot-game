@@ -7,8 +7,8 @@ func _on_full_screen_toggled(toggled_on):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		#Persistence.config.set_value("Video", "fullscreen", DisplayServer.WINDOW_MODE_WINDOWED)
-		
-		
+
+
 func _on_borderless_toggled(toggled_on):
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, toggled_on)
 	#Persistence.config.set_value("Video", "borderless", toggled_on)
@@ -19,3 +19,4 @@ func _on_v_sync_item_selected(index):
 	DisplayServer.window_set_vsync_mode(index)
 	#Persistence.config.set_value("Video", "vsync", index)
 	#Persistence.save_data()
+

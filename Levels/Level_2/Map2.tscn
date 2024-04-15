@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxkcsjc5pt0k0"]
+[gd_scene load_steps=6 format=3 uid="uid://dxkcsjc5pt0k0"]
 
 [ext_resource type="Texture2D" uid="uid://bxe85cf6pccs4" path="res://Levels/Level_2/Blue.png" id="1_xuut5"]
 [ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_mlolk"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_r124p"]
-[ext_resource type="Script" path="res://GlobalCharacterMovement.gd" id="4_hfw8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dohmt"]
 texture = ExtResource("2_mlolk")
@@ -474,6 +473,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 16.0
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xuut5")
@@ -489,6 +492,5 @@ layer_0/tile_data = PackedInt32Array(917503, 786432, 5, 851967, 786432, 5, 78643
 [node name="Character1" parent="." instance=ExtResource("3_r124p")]
 top_level = true
 position = Vector2(31, 572)
-script = ExtResource("4_hfw8w")
 jump_power = -1300
 gravity = 105

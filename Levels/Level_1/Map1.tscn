@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvhes1us3c56m"]
+[gd_scene load_steps=9 format=3 uid="uid://cvhes1us3c56m"]
 
 [ext_resource type="Texture2D" uid="uid://bhes5iv03ug5j" path="res://Levels/Level_1/Green.png" id="1_ps7tg"]
 [ext_resource type="Texture2D" uid="uid://cdvbw3u7r2os0" path="res://Levels/Level_1/Terrain (16x16).png" id="2_jwhw4"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_f4mx8"]
-[ext_resource type="Script" path="res://GlobalCharacterMovement.gd" id="4_ugie8"]
-[ext_resource type="Script" path="res://Levels/Level_1/Area2D.gd" id="5_vslle"]
+[ext_resource type="Script" path="res://Menu/Menu.gd" id="5_vp5u2"]
 [ext_resource type="Texture2D" uid="uid://c1mbrj4jy6lsa" path="res://Menu/door.png" id="6_xs0u6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wr33"]
@@ -467,9 +466,13 @@ size = Vector2(69, 145.5)
 
 [node name="M1" type="TextureRect"]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.961538
+anchor_bottom = 0.933333
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 32.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -487,11 +490,9 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="Character1" parent="." instance=ExtResource("3_f4mx8")]
 top_level = true
-position = Vector2(185, 576)
-script = ExtResource("4_ugie8")
+position = Vector2(216, 576)
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("5_vslle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(42, 169.75)
@@ -502,5 +503,17 @@ position = Vector2(39, 154)
 scale = Vector2(0.126667, 0.146667)
 texture = ExtResource("6_xs0u6")
 
+[node name="Full-Screen" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 208.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 30
+text = "Full Screen"
+script = ExtResource("5_vp5u2")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="Area2D" to="Character1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Character1" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Full-Screen" to="Full-Screen" method="_on_pressed"]
