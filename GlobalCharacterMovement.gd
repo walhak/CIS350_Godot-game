@@ -22,9 +22,9 @@ extends CharacterBody2D
 var current_jumps = 0
 
 #name of each level
-var rep_cur = ["M1", "M2", "menu"]
+var rep_cur = ["M1", "M2", "M3", "M4", "M5", "menu"]
 #path to each level
-var current_level = ["res://Levels/Level_1/Map1.tscn", "res://Levels/Level_2/Map2.tscn", "res://Menu/menu.tscn"]
+var current_level = ["res://Levels/Level_1/Map1.tscn", "res://Levels/Level_2/Map2.tscn", "res://Levels/Level_3/map3.tscn", "res://Levels/Level_4/Map4.tscn", "res://Levels/Level_5/Map5.tscn", "res://Menu/menu.tscn"]
 
 #check if character is on the odor
 var check = false
@@ -108,3 +108,11 @@ func _on_area_2d_body_entered(body):
 #checks if character left the doorway to disable the movement to next level
 func _on_area_2d_body_exited(body):
 	check = false
+
+
+func _on_area_2d_21_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_area_2d_21_body_exited(body):
+	pass # Replace with function body.
