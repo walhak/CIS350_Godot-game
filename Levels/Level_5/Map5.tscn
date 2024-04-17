@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpwrinjxqe8rq"]
+[gd_scene load_steps=10 format=3 uid="uid://bpwrinjxqe8rq"]
 
 [ext_resource type="Texture2D" uid="uid://brn1nr002w4ab" path="res://Levels/Level_5/Yellow.png" id="1_y7ahy"]
 [ext_resource type="Texture2D" uid="uid://c8maljv6ykjsx" path="res://Terrain (16x16).png" id="2_vyn2c"]
 [ext_resource type="PackedScene" uid="uid://dtgiboxac13rj" path="res://Charaters/character_1.tscn" id="3_0ii04"]
-[ext_resource type="Script" path="res://GlobalCharacterMovement.gd" id="4_wmiqc"]
+[ext_resource type="Script" path="res://Levels/Level_1/Area2D.gd" id="4_m6e0t"]
 [ext_resource type="PackedScene" uid="uid://cs5lj77shgpvm" path="res://Levels/Level_5/banana.tscn" id="5_8gd4h"]
 [ext_resource type="Texture2D" uid="uid://c1mbrj4jy6lsa" path="res://Menu/door.png" id="6_y5ofe"]
 
@@ -457,7 +457,10 @@ texture = ExtResource("2_vyn2c")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b1m8h")
 
-[node name="Node" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc2ee"]
+size = Vector2(105, 151)
+
+[node name="M5" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -482,9 +485,15 @@ layer_0/tile_data = PackedInt32Array(65535, 1114112, 9, 131071, 1114112, 9, 1966
 [node name="Character1" parent="." instance=ExtResource("3_0ii04")]
 top_level = true
 position = Vector2(63, 581)
-script = ExtResource("4_wmiqc")
 
-[node name="Door" type="Sprite2D" parent="."]
+[node name="Area2D21" type="Area2D" parent="."]
+script = ExtResource("4_m6e0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D21"]
+position = Vector2(1825.5, 560.5)
+shape = SubResource("RectangleShape2D_vc2ee")
+
+[node name="Door" type="Sprite2D" parent="Area2D21"]
 position = Vector2(1821, 542)
 scale = Vector2(0.195, 0.161667)
 texture = ExtResource("6_y5ofe")
@@ -548,3 +557,6 @@ position = Vector2(1594, 98)
 
 [node name="Area2D20" parent="." instance=ExtResource("5_8gd4h")]
 position = Vector2(1394, 243)
+
+[connection signal="body_entered" from="Area2D21" to="Character1" method="_on_area_2d_21_body_entered"]
+[connection signal="body_exited" from="Area2D21" to="Character1" method="_on_area_2d_21_body_exited"]

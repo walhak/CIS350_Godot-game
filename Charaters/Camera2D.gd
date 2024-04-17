@@ -1,6 +1,6 @@
 extends Camera2D
 
-var map_width: int = 1200  # Adjust to your actual map width
+var map_width: int = 2550  # Adjust to your actual map width
 var map_height: int = 670  # Adjust to your actual map height
 
 func _ready():
