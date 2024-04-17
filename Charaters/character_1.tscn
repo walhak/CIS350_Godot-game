@@ -21,5 +21,5 @@ texture = ExtResource("1_km8e6")
 zoom = Vector2(1.26, 1.26)
 limit_left = -48
 limit_top = -48
-limit_right = 1200
+limit_right = 1792
 limit_bottom = 672
